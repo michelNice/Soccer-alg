@@ -18,37 +18,24 @@ const Playoffs = [
     }
 ]
 
-const derby = []
 
 const  teamsn = Playoffs.flatMap(league => {
  
     return league.teams.map(team => {
 
         return {
-            name:team,
+            team:team,
             league:league.liga
         }
     })
 }).sort(()=> Math.random() - 0.5)
 
 
-const clone = teamsn.slice()
-
-function match(){
-     
-    const teamA = clone[0]
-
-    const possiveis = clone.filter(time => {
-
-        return teamA.league  !== time.league
-    })
-
-    console.log(possiveis)
-
-}
 
 
-match()
+
+
+
 
 
 
